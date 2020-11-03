@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<h1><%=@event.title%></h1>
+	<ul>
+		<li>
+			<%=@event.description%>
+		</li>
+		<li>
+			<%=@event.attendances.count%>
+		</li>
+		<li>
+			<%=@event.start_date%>
+		</li>
+		<li>
+			<%=@event.ending_date%>
+		</li>
+		<li>
+			<%=@event.location%>
+		</li>
+		<li>
+			<p> pour seulement <%=@event.price%> € </p>
+		</li>
+	</ul>
+
+</body>
+</html>
