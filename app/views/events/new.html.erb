@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+
+	<h1>création d'event</h1>
+
+	<%= form_tag url_for(action: 'create'), method: "post" do %>
+	<%= label_tag "Nom de l'event" %>
+	<br/>
+	<%= text_field_tag 'title', @event.title %>
+	<br/>
+
+	<%= label_tag "Lieu de l'event" %>
+	<br/>
+	<%= text_field_tag 'location', @event.location %>
+	<br/>
+
+	<%= label_tag "La date de ton event"%>
+	<br/>
+	<%= datetime_field_tag 'start_date', @event.start_date %>
+	<br/>
+
+	<%= label_tag "La durée de ton event" %>
+	<br/>
+	<%= number_field_tag 'duration', @event.duration %>
+	<br/>
+
+	<%= label_tag "En quelques lignes c'est quoi?" %>
+	<br/>
+	<%= text_field_tag 'description', @event.description %>
+	<br/>
+
+	<%= label_tag "Combien ça va coûter?" %>
+	<br/>
+	<%= number_field_tag 'price', @event.price %>
+	<br/>
+
+
+	<%= submit_tag "Enregistre ton nouvel event!" %>
+
+	<%end%>
+</body>
+</html>
